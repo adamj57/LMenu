@@ -70,7 +70,7 @@ public class LMenu {
 		displayControls();
 		//Tu dodam listener do controlsów
 		Point[][] animation = menuItems.get(0).getMenuAnimation();
-		lDisplay.display(animation);
+		lDisplay.displayRawAnimation(animation);
 		
 		lDisplay.clear();
 		
@@ -83,9 +83,9 @@ public class LMenu {
 	
 	private void displayControls(){
 		
-		lp.changeSceneButton(LButton.LEFT, LColor.GREEN_HIGH);
-		lp.changeSceneButton(LButton.RIGHT, LColor.GREEN_HIGH);
-		lp.changeButton(LButton.SCENE1, LColor.RED_HIGH);
+		lp.changeButton(LButton.LEFT, LColor.GREEN_HIGH);
+		lp.changeButton(LButton.RIGHT, LColor.GREEN_HIGH);
+		lp.changeButton(LButton.MIXER, LColor.RED_HIGH);
 		
 	}
 	
