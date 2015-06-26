@@ -5,5 +5,6 @@ import java.awt.Point;
 public interface LMenuItem {
 
 	public void launch();
-	public Point[][] ifChoosenAnimation(); 
+	public Point[][] getMenuAnimation(); 
+	public Point[] getLogo();
 }
