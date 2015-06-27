@@ -46,17 +46,17 @@ public class LMenu {
 			
 			case LButton.LEFT:
 				
-				scroll(LEFT);
+				lp.changeButton(LButton.LEFT, LColor.GREEN_LOW);
 				break;
 				
 			case LButton.RIGHT:
 				
-				scroll(RIGHT);
+				lp.changeButton(LButton.RIGHT, LColor.GREEN_LOW);
 				break;
 				
 			case LButton.MIXER:
 				
-				launchItem();
+				lp.changeButton(LButton.MIXER, LColor.YELLOW_LOW);
 				break;
 				
 			}
@@ -66,7 +66,27 @@ public class LMenu {
 
 		@Override
 		public void launchpadButtonReleased(int buttonCode) {
-			// TODO Auto-generated method stub
+			
+			switch(buttonCode){
+			
+			case LButton.LEFT:
+			
+				lp.changeButton(LButton.LEFT, LColor.GREEN_HIGH);
+				scroll(LEFT);
+				break;
+				
+			case LButton.RIGHT:
+				
+				lp.changeButton(LButton.LEFT, LColor.GREEN_HIGH);
+				scroll(RIGHT);
+				break;
+				
+			case LButton.MIXER:
+				lp.changeButton(LButton.MIXER, LColor.YELLOW_HIGH);
+				launchItem();
+				break;
+				
+			}
 			
 		}
 
@@ -76,7 +96,8 @@ public class LMenu {
 			switch(buttonCode){
 			
 			case LButton.SCENE8:
-				lp.dispose();
+				
+				lp.changeSceneButton(LButton.SCENE8, LColor.RED_LOW);
 				break;
 			}
 			
@@ -84,7 +105,15 @@ public class LMenu {
 
 		@Override
 		public void launchpadSceneButtonReleased(int buttonCode) {
-			// TODO Auto-generated method stub
+			
+			switch(buttonCode){
+			
+			case LButton.SCENE8:
+				
+				lp.changeSceneButton(LButton.SCENE8, LColor.RED_LOW);
+				lp.dispose();
+				break;
+			}
 			
 		}
 		
