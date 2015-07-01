@@ -12,20 +12,21 @@ import com.rngtng.launchpad.LaunchpadListener;
 
 public class LMenu {
 	
-	private ArrayList<LMenuItem> menuItems = new ArrayList<LMenuItem>();
+	private ArrayList<LMenuItem> items = new ArrayList<LMenuItem>();
 	
 	private final int LEFT = 0;
 	private final int RIGHT = 1;
+	private final int UP = 2;
+	private final int DOWN = 3;
 	
-	private Launchpad lp;
 	
-	LDisplay lDisplay;
+	private LDisplay lDisplay;
 	
-	boolean displaying = false;
+	private boolean displaying = false;
 	
-	int indexOfDisplayingItem;
+	private ArrayList<Integer> indexOfCurrentItem = new ArrayList<Integer>();
 	
-	LaunchpadListener listener = new LaunchpadListener(){
+	private LaunchpadListener listener = new LaunchpadListener(){
 
 		@Override
 		public void launchpadGridPressed(int x, int y) {
@@ -121,43 +122,39 @@ public class LMenu {
 	
 	public LMenu(Launchpad lp){
 		
-		this.setLp(lp);
-		
 		lDisplay = new LDisplay(lp);
 		
 	}
 	
 	public Launchpad getLp() {
 		
-		return lp;
+		return lDisplay.getLp();
 	}
 
 	public void setLp(Launchpad lp) {
 		
-		this.lp = lp;
+		lDisplay.setLp(lp);
 	}
 
-	public LMenu addItem(LMenuItem item){
+	public void addItem(LMenuItem item){
 		
-		menuItems.add(item);
-		return this;
+		items.add(item);
 	}
 	
-	public LMenu addItem(LMenuItem item, int pos){
+	public void addItem(LMenuItem item, int pos){
 		
-		menuItems.add(pos, item);
-		return this;
+		items.add(pos, item);
 	}
 	
 	public void removeItem(LMenuItem item){
 		
-		menuItems.remove(item);
+		items.remove(item);
 		
 	}
 	
 	public void removeItem(int pos){
 		
-		menuItems.remove(pos);
+		items.remove(pos);
 		
 	}
 	
@@ -166,7 +163,7 @@ public class LMenu {
 		//TODO display
 		displayControls();
 		
-		lp.addListener(listener);
+		getLp().addListener(listener);
 		displayItem(0);
 		
 		displaying = true;
@@ -176,11 +173,12 @@ public class LMenu {
 
 	private void launchItem() {
 		
-		lp.removeListener(listener);
+		getLp().removeListener(listener);
 		lDisplay.clear();
 		hideControls();
 		displaying = false;
-		menuItems.get(indexOfDisplayingItem).launch();
+		// Item, który sprawdzam, czy kontener czy nie 
+		//items.get(indexOfCurrentItem.get(indexOfCurrentItem.size()-1));
 		
 		display();
 		
@@ -190,7 +188,7 @@ public class LMenu {
 		
 		lDisplay.clear();
 		
-		Animation animation = menuItems.get(index).getMenuAnimation();
+		Animation animation = items.get(index).getAnimation();
 		if(animation.isRaw()){
 			
 			lDisplay.displayRawAnimation(animation.getAnimation(), animation.getSpeed(), animation.getColor());
@@ -202,28 +200,28 @@ public class LMenu {
 		
 		lDisplay.clear();
 		
-		Point[] logo = menuItems.get(index).getLogo();
+		Point[] logo = items.get(index).getLogo();
 		lDisplay.display(logo);
 		
-		indexOfDisplayingItem = index;
+		indexOfCurrentItem.set(indexOfCurrentItem.size()-1, index);
 		
 		
 	}
 	private void displayControls(){
 		
-		lp.changeButton(LButton.LEFT, LColor.GREEN_HIGH);
-		lp.changeButton(LButton.RIGHT, LColor.GREEN_HIGH);
-		lp.changeButton(LButton.MIXER, LColor.YELLOW_HIGH);
-		lp.changeSceneButton(LButton.SCENE8, LColor.HIGH);
+		getLp().changeButton(LButton.LEFT, LColor.GREEN_HIGH);
+		getLp().changeButton(LButton.RIGHT, LColor.GREEN_HIGH);
+		getLp().changeButton(LButton.MIXER, LColor.YELLOW_HIGH);
+		getLp().changeSceneButton(LButton.SCENE8, LColor.HIGH);
 		
 	}
 	
 	private void hideControls(){
 		
-		lp.changeButton(LButton.LEFT, LColor.GREEN_OFF);
-		lp.changeButton(LButton.RIGHT, LColor.GREEN_OFF);
-		lp.changeButton(LButton.MIXER, LColor.YELLOW_OFF);
-		lp.changeSceneButton(LButton.SCENE8, LColor.OFF);
+		getLp().changeButton(LButton.LEFT, LColor.GREEN_OFF);
+		getLp().changeButton(LButton.RIGHT, LColor.GREEN_OFF);
+		getLp().changeButton(LButton.MIXER, LColor.YELLOW_OFF);
+		getLp().changeSceneButton(LButton.SCENE8, LColor.OFF);
 		
 	}
 	
@@ -233,12 +231,12 @@ public class LMenu {
 			
 		case LEFT:
 			
-			displayItem(indexOfDisplayingItem - 1);
+			displayItem(indexOfCurrentItem.get(indexOfCurrentItem.size()-1) - 1);
 			break;
 		
 		case RIGHT:
 			
-			displayItem(indexOfDisplayingItem + 1);
+			displayItem(indexOfCurrentItem.get(indexOfCurrentItem.size()-1) + 1);
 			break;
 			
 		
