@@ -22,8 +22,6 @@ public class LMenu {
 	
 	private LDisplay lDisplay;
 	
-	private boolean displaying = false;
-	
 	private ArrayList<Integer> indexOfCurrentItem = new ArrayList<Integer>();
 	
 	private LaunchpadListener listener = new LaunchpadListener(){
@@ -60,6 +58,11 @@ public class LMenu {
 				getLp().changeButton(LButton.MIXER, LColor.YELLOW_LOW);
 				break;
 				
+			case LButton.DOWN:
+				
+				getLp().changeButton(LButton.DOWN, LColor.LOW);
+				break;
+				
 			}
 			
 		}
@@ -84,12 +87,20 @@ public class LMenu {
 				
 			case LButton.MIXER:
 				getLp().changeButton(LButton.MIXER, LColor.YELLOW_HIGH);
-				launchItem();
+				selectItem();
+				break;
+				
+			case LButton.DOWN:
+				
+				getLp().changeButton(LButton.DOWN, LColor.HIGH);
+				changeDir(DOWN);
 				break;
 				
 			}
-			
+				
 		}
+			
+		
 
 		@Override
 		public void launchpadSceneButtonPressed(int buttonCode) {
@@ -111,7 +122,7 @@ public class LMenu {
 			
 			case LButton.SCENE8:
 				
-				getLp().changeSceneButton(LButton.SCENE8, LColor.RED_LOW);
+				getLp().changeSceneButton(LButton.SCENE8, LColor.RED_HIGH);
 				getLp().dispose();
 				break;
 			}
@@ -122,6 +133,7 @@ public class LMenu {
 	
 	public LMenu(Launchpad lp){
 		
+		indexOfCurrentItem.add(new Integer(0));
 		lDisplay = new LDisplay(lp);
 		
 	}
@@ -158,37 +170,93 @@ public class LMenu {
 		
 	}
 	
-	public void display(){
+	public LMenuItem get(int index){
+		
+		return items.get(index);
+	}
+	
+	public void run(){
 		
 		//TODO display
-		displayControls();
-		
-		getLp().addListener(listener);
+		showControls();
 		displayItem(0);
-		
-		displaying = true;
 	}
 	
 
 
-	private void launchItem() {
+	private void launch() {
 		
-		getLp().removeListener(listener);
 		lDisplay.clear();
 		hideControls();
-		displaying = false;
-		// Item, który sprawdzam, czy kontener czy nie 
-		//items.get(indexOfCurrentItem.get(indexOfCurrentItem.size()-1));
+		int size = indexOfCurrentItem.size();
+		LMenuItem toLaunch = items.get(indexOfCurrentItem.get(0));
 		
-		display();
+			
+		for(int i = 1; i < size; i++){
+				
+				toLaunch = ((LMenuContainer)toLaunch).get(indexOfCurrentItem.get(i));
+				
+		}	
+			
+		((Launchable) toLaunch).launch();
+		showControls();
+		displayItem(indexOfCurrentItem.get(indexOfCurrentItem.size()-1));
 		
+	}
+	
+	private void changeDir(int direction){
+		
+		switch(direction) {
+	
+			
+			case UP:
+				
+				indexOfCurrentItem.add(new Integer(0));
+				
+				displayItem(0);
+				
+				break;
+				
+			case DOWN:
+				
+				indexOfCurrentItem.remove(indexOfCurrentItem.size() - 1);
+				
+				displayItem(indexOfCurrentItem.get(indexOfCurrentItem.size() - 1));
+				
+				break;
+				
+		}
+				
+				
 	}
 
 	private void displayItem(int index){
 		
 		lDisplay.clear();
 		
-		Animation animation = items.get(index).getAnimation();
+		int size = indexOfCurrentItem.size();
+		
+		
+		LMenuItem toSelect = items.get(index);
+		if(size == 1){
+			
+			toSelect = items.get(index);
+			
+		}else{
+			ArrayList<LMenuItem> list = items;
+			for(int i = 1; i < size - 1; i++){
+				
+				list = ((LMenuContainer) list.get(indexOfCurrentItem.get(i))).getList();
+				
+			}	
+			
+			toSelect = ((LMenuContainer)toSelect).get(index);
+		}
+		
+		
+		
+		
+		Animation animation = toSelect.getAnimation();
 		if(animation.isRaw()){
 			
 			lDisplay.displayRawAnimation(animation.getAnimation(), animation.getSpeed(), animation.getColor());
@@ -200,15 +268,16 @@ public class LMenu {
 		
 		lDisplay.clear();
 		
-		Point[] logo = items.get(index).getLogo();
+		Point[] logo = toSelect.getLogo();
 		lDisplay.display(logo);
 		
-		indexOfCurrentItem.set(indexOfCurrentItem.size()-1, index);
+		indexOfCurrentItem.set(indexOfCurrentItem.size() - 1, index);
 		
 		
 	}
-	private void displayControls(){
+	private void showControls(){
 		
+		getLp().addListener(listener);
 		getLp().changeButton(LButton.LEFT, LColor.GREEN_HIGH);
 		getLp().changeButton(LButton.RIGHT, LColor.GREEN_HIGH);
 		getLp().changeButton(LButton.MIXER, LColor.YELLOW_HIGH);
@@ -218,6 +287,7 @@ public class LMenu {
 	
 	private void hideControls(){
 		
+		getLp().removeListener(listener);
 		getLp().changeButton(LButton.LEFT, LColor.GREEN_OFF);
 		getLp().changeButton(LButton.RIGHT, LColor.GREEN_OFF);
 		getLp().changeButton(LButton.MIXER, LColor.YELLOW_OFF);
@@ -243,5 +313,35 @@ public class LMenu {
 		}
 		
 	}
+
+	private void selectItem() {
+		int size = indexOfCurrentItem.size();
+		LMenuItem toLaunch = items.get(indexOfCurrentItem.get(0));
+		
+			
+		for(int i = 1; i < size; i++){
+				
+				toLaunch = ((LMenuContainer)toLaunch).get(indexOfCurrentItem.get(i));
+				
+		}	
+		
+		if(toLaunch instanceof LMenuContainer){
+			
+			changeDir(UP);
+			
+		}else{
+			
+			if(toLaunch instanceof Launchable){
+				
+				launch();
+				
+			}else{
+				
+				//Do nothing!!!
+			}
+			
+		}
+	}
+
 	
 }

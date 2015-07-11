@@ -44,4 +44,9 @@ public class LMenuContainer extends LMenuItem {
 		return items.get(index);
 		
 	}
+	
+	public ArrayList<LMenuItem> getList(){
+		
+		return items;
+	}
 }
