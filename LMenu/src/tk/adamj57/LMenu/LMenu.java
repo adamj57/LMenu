@@ -123,7 +123,17 @@ public class LMenu {
 			case LButton.SCENE8:
 				
 				getLp().changeSceneButton(LButton.SCENE8, LColor.RED_HIGH);
-				getLp().dispose();
+				new Thread(new Runnable(){
+
+					@Override
+					public void run() {
+						
+						getLp().dispose();
+						
+					}
+					
+				}).start();
+				
 				break;
 			}
 			
