@@ -229,9 +229,14 @@ public class LMenu {
 				
 			case DOWN:
 				
-				indexOfCurrentItem.remove(indexOfCurrentItem.size() - 1);
+				if(indexOfCurrentItem.size() > 1){
+					
+					indexOfCurrentItem.remove(indexOfCurrentItem.size() - 1);
+					
+					displayItem(indexOfCurrentItem.get(indexOfCurrentItem.size() - 1));
+					
+				}
 				
-				displayItem(indexOfCurrentItem.get(indexOfCurrentItem.size() - 1));
 				
 				break;
 				
@@ -242,29 +247,22 @@ public class LMenu {
 
 	private void displayItem(int index){
 		
-		lDisplay.clear();
+		
+		try{
+			
 		
 		int size = indexOfCurrentItem.size();
 		
+		LMenuItem toSelect = items.get(indexOfCurrentItem.get(0));
 		
-		LMenuItem toSelect = items.get(index);
-		if(size == 1){
+		for(int i = 1; i < size; i++){
 			
-			toSelect = items.get(index);
+			toSelect = ((LMenuContainer)(toSelect)).get(indexOfCurrentItem.get(i));
 			
-		}else{
-			ArrayList<LMenuItem> list = items;
-			for(int i = 1; i < size - 1; i++){
-				
-				list = ((LMenuContainer) list.get(indexOfCurrentItem.get(i))).getList();
-				
-			}	
 			
-			toSelect = ((LMenuContainer)toSelect).get(index);
 		}
 		
-		
-		
+		lDisplay.clear();
 		
 		Animation animation = toSelect.getAnimation();
 		if(animation.isRaw()){
@@ -283,6 +281,10 @@ public class LMenu {
 		
 		indexOfCurrentItem.set(indexOfCurrentItem.size() - 1, index);
 		
+		}catch(IndexOutOfBoundsException e){
+			
+			System.err.println("Error: Index out of bounds. Can't show " + index + "of that list, it don't exist.");
+		}
 		
 	}
 	private void showControls(){
@@ -310,8 +312,9 @@ public class LMenu {
 		switch(direction){
 			
 		case LEFT:
-			
+			if(indexOfCurrentItem.get(indexOfCurrentItem.size()-1) - 1 >= 0){
 			displayItem(indexOfCurrentItem.get(indexOfCurrentItem.size()-1) - 1);
+			}
 			break;
 		
 		case RIGHT:
