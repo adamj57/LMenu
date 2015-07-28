@@ -1,4 +1,4 @@
-package tk.adamj57.LMenu;
+package tk.adamj57.Launchpad.LMenu;
 
 import java.awt.Point;
 import java.util.ArrayList;
