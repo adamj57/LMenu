@@ -3,7 +3,7 @@ package tk.adamj57.Launchpad.LMenu;
 import java.awt.Point;
 import java.util.ArrayList;
 
-import tk.adamj57.LChar.LDisplay;
+import tk.adamj57.Launchpad.LChar.LDisplay;
 
 import com.rngtng.launchpad.LButton;
 import com.rngtng.launchpad.LColor;

@@ -2,9 +2,9 @@ package tk.adamj57.Launchpad.LMenu;
 
 import java.awt.Point;
 
-import tk.adamj57.LChar.LChar;
-
 import com.rngtng.launchpad.LColor;
+
+import tk.adamj57.Launchpad.LChar.LChar;
 
 public class Animation {
 
