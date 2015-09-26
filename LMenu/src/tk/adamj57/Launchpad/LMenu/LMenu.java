@@ -1,30 +1,29 @@
 package tk.adamj57.Launchpad.LMenu;
 
-import java.awt.Point;
-import java.util.ArrayList;
-
-import tk.adamj57.Launchpad.LChar.LDisplay;
-
 import com.rngtng.launchpad.LButton;
 import com.rngtng.launchpad.LColor;
 import com.rngtng.launchpad.Launchpad;
 import com.rngtng.launchpad.LaunchpadListener;
+import tk.adamj57.Launchpad.LChar.LDisplay;
+
+import java.awt.*;
+import java.util.ArrayList;
 
 public class LMenu {
-	
-	private ArrayList<LMenuItem> items = new ArrayList<LMenuItem>();
+
+	private final ArrayList<LMenuItem> items = new ArrayList<>();
 	
 	private final int LEFT = 0;
 	private final int RIGHT = 1;
 	private final int UP = 2;
 	private final int DOWN = 3;
-	
-	
-	private LDisplay lDisplay;
-	
-	private ArrayList<Integer> indexOfCurrentItem = new ArrayList<Integer>();
-	
-	private LaunchpadListener listener = new LaunchpadListener(){
+
+
+	private final LDisplay lDisplay;
+
+	private final ArrayList<Integer> indexOfCurrentItem = new ArrayList<>();
+
+	private final LaunchpadListener listener = new LaunchpadListener() {
 
 		@Override
 		public void launchpadGridPressed(int x, int y) {
@@ -123,15 +122,11 @@ public class LMenu {
 			case LButton.SCENE8:
 				
 				getLp().changeSceneButton(LButton.SCENE8, LColor.RED_HIGH);
-				new Thread(new Runnable(){
+				//noinspection Convert2Lambda
+				new Thread(() -> {
 
-					@Override
-					public void run() {
-						
-						getLp().dispose();
-						
-					}
-					
+					getLp().dispose();
+
 				}).start();
 				
 				break;
@@ -142,8 +137,8 @@ public class LMenu {
 	};
 	
 	public LMenu(Launchpad lp){
-		
-		indexOfCurrentItem.add(new Integer(0));
+
+		indexOfCurrentItem.add(0);
 		lDisplay = new LDisplay(lp);
 		
 	}
@@ -220,8 +215,8 @@ public class LMenu {
 	
 			
 			case UP:
-				
-				indexOfCurrentItem.add(new Integer(0));
+
+				indexOfCurrentItem.add(0);
 				
 				displayItem(0);
 				
@@ -348,11 +343,7 @@ public class LMenu {
 				
 				launch();
 				
-			}else{
-				
-				//Do nothing!!!
 			}
-			
 		}
 	}
 

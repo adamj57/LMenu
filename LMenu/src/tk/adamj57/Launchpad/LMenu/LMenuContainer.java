@@ -1,13 +1,11 @@
 package tk.adamj57.Launchpad.LMenu;
 
-import java.awt.Point;
+import java.awt.*;
 import java.util.ArrayList;
-
-import com.rngtng.launchpad.Launchpad;
 
 public class LMenuContainer extends LMenuItem {
 
-	private ArrayList<LMenuItem> items = new ArrayList<LMenuItem>();
+	private final ArrayList<LMenuItem> items = new ArrayList<>();
 	
 	public LMenuContainer(Animation animation, Point[] logo) {
 		super(animation, logo);
