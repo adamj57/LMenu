@@ -1,13 +1,12 @@
 package tk.adamj57.Launchpad.LMenu;
 
-import java.awt.Point;
-
 import com.rngtng.launchpad.LColor;
-
 import tk.adamj57.Launchpad.LChar.LChar;
 
-public class Animation {
+import java.awt.*;
 
+public class Animation {
+	/* Test for IntelliJ IDEA */
 	private Point[][] animation = null;
 	private LChar[] stringToAnimate = null;
 	private long speed;
@@ -103,11 +102,7 @@ public class Animation {
 	}
 	
 	public boolean isRaw(){
-		
-		if(animation == null){
-			return false;
-		}else{
-			return true;
-		}
+
+		return !(animation == null);
 	}
 }
