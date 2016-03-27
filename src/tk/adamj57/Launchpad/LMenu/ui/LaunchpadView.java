@@ -1,4 +1,4 @@
-package tk.adamj57.Launchpad.LMenu;
+package tk.adamj57.Launchpad.LMenu.ui;
 
 import tk.adamj57.Launchpad.LChar.Pixel;
 
@@ -7,6 +7,5 @@ import tk.adamj57.Launchpad.LChar.Pixel;
  */
 public interface LaunchpadView {
     Pixel[] getView();
-
     LMenuButton[] getButtons();
 }

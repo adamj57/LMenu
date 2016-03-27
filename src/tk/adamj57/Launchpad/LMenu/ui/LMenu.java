@@ -1,4 +1,4 @@
-package tk.adamj57.Launchpad.LMenu;
+package tk.adamj57.Launchpad.LMenu.ui;
 
 import com.rngtng.launchpad.LButton;
 import com.rngtng.launchpad.LColor;
@@ -6,6 +6,7 @@ import com.rngtng.launchpad.Launchpad;
 import com.rngtng.launchpad.LaunchpadListener;
 import tk.adamj57.Launchpad.LChar.LDisplay;
 import tk.adamj57.Launchpad.LChar.Pixel;
+import tk.adamj57.Launchpad.LMenu.Animation;
 import tk.adamj57.Launchpad.LMenu.util.ArrayListU;
 
 import java.awt.*;

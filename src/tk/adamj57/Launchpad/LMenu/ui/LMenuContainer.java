@@ -1,4 +1,6 @@
-package tk.adamj57.Launchpad.LMenu;
+package tk.adamj57.Launchpad.LMenu.ui;
+
+import tk.adamj57.Launchpad.LMenu.Animation;
 
 import java.awt.*;
 import java.util.ArrayList;

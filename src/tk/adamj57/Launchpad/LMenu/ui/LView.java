@@ -1,4 +1,4 @@
-package tk.adamj57.Launchpad.LMenu;
+package tk.adamj57.Launchpad.LMenu.ui;
 
 import com.rngtng.launchpad.Launchpad;
 import com.rngtng.launchpad.LaunchpadListener;

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f88395af-1f60-4a8e-ae8d-9791e1b4924c" name="Default" comment="Some optimalizations.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButtonListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LaunchpadView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/util/ArrayListU.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="f88395af-1f60-4a8e-ae8d-9791e1b4924c" name="Default" comment="Lots of refactoring">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LaunchpadView.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButton.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButton.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButtonListener.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButtonListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuContainer.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuItem.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuItem.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LView.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LaunchpadView.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LaunchpadView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuContainer.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuItem.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java" afterPath="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test.ucls" afterPath="$PROJECT_DIR$/Test.ucls" />
     </list>
     <ignored path="LMenu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,18 +36,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Animation.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Animation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.5049505">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+              <folding>
+                <element signature="e#1619#1620#0" expanded="true" />
+                <element signature="e#1638#1639#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Launchable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java">
+        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
@@ -58,15 +60,15 @@
         </entry>
       </file>
       <file leaf-file-name="LMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java">
+        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
               <folding>
+                <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
                 <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
                 <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
                 <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
-                <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
                 <element signature="method#start#0;class#LMenu#0" expanded="false" />
                 <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
                 <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
@@ -74,18 +76,18 @@
                 <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
                 <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
                 <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
-                <element signature="class#7255:7537" expanded="false" />
+                <element signature="class#7418:7700" expanded="false" />
                 <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LView.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LView.java">
+      <file leaf-file-name="LView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36468646">
-              <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
               <folding>
                 <element signature="method#LView#0;class#LView#0" expanded="false" />
                 <element signature="method#launchpadGridPressed#0;class#LView#0" expanded="false" />
@@ -97,30 +99,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LaunchpadView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LaunchpadView.java">
+      <file leaf-file-name="LMenuButtonListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButtonListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LaunchpadView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LaunchpadView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LMenuButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButton.java">
+        <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#264:417" expanded="false" />
-                <element signature="e#605#606#0" expanded="true" />
-                <element signature="e#645#646#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
+                <element signature="class#267:420" expanded="false" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
                 <element signature="method#changeColor#0;class#LMenuButton#0" expanded="false" />
               </folding>
             </state>
@@ -154,15 +166,17 @@
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/util/ArrayListUtils.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/util/ArrayListU.java" />
-        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButtonListener.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuSideButton.java" />
-        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LaunchpadView.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuGridButton.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButtom.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButton.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/MenuControlsView.java" />
-        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LView.java" />
         <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java" />
+        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LView.java" />
+        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButtonListener.java" />
+        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LaunchpadView.java" />
+        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButtonListener.java" />
+        <option value="$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LView.java" />
       </list>
     </option>
   </component>
@@ -218,8 +232,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -257,6 +271,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="LMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -566,7 +602,8 @@
       <workItem from="1443459019163" duration="628000" />
       <workItem from="1444318136648" duration="280000" />
       <workItem from="1444460778331" duration="2078000" />
-      <workItem from="1459022005291" duration="12093000" />
+      <workItem from="1459022005291" duration="12217000" />
+      <workItem from="1459039243330" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="Test for Intellij, please move along.">
       <created>1443289758297</created>
@@ -580,41 +617,47 @@
       <option name="project" value="LOCAL" />
       <updated>1443290839526</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lots of refactoring">
+      <created>1459035862365</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1459035862365</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18695000" />
+    <option name="totallyTimeSpent" value="19015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -633,7 +676,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Test for Intellij, please move along." />
     <MESSAGE value="Some optimalizations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some optimalizations." />
+    <MESSAGE value="Lots of refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lots of refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -652,28 +696,31 @@
     <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
           <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding>
+            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
             <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
             <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
-            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#start#0;class#LMenu#0" expanded="false" />
             <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
             <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
@@ -681,7 +728,88 @@
             <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
-            <element signature="class#7255:7537" expanded="false" />
+            <element signature="class#7418:7700" expanded="false" />
+            <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#LView#0;class#LView#0" expanded="false" />
+            <element signature="method#launchpadGridPressed#0;class#LView#0" expanded="false" />
+            <element signature="method#launchpadGridReleased#0;class#LView#0" expanded="false" />
+            <element signature="method#sideButtonPressed#0;class#LView#0" expanded="false" />
+            <element signature="method#sideButtonReleased#0;class#LView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LaunchpadView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#267:420" expanded="false" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="method#changeColor#0;class#LMenuButton#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
+            <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
+            <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
+            <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
+            <element signature="method#start#0;class#LMenu#0" expanded="false" />
+            <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
+            <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
+            <element signature="method#displayItem#0;class#LMenu#0" expanded="false" />
+            <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
+            <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
+            <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
+            <element signature="class#7418:7700" expanded="false" />
             <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
           </folding>
         </state>
@@ -691,11 +819,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
@@ -703,15 +834,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
             <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
             <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
-            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#start#0;class#LMenu#0" expanded="false" />
             <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
             <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
@@ -719,7 +850,7 @@
             <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
-            <element signature="class#7255:7537" expanded="false" />
+            <element signature="class#7418:7700" expanded="false" />
             <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
           </folding>
         </state>
@@ -729,11 +860,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
@@ -741,15 +875,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
             <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
             <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
-            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#start#0;class#LMenu#0" expanded="false" />
             <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
             <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
@@ -757,7 +891,7 @@
             <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
-            <element signature="class#7255:7537" expanded="false" />
+            <element signature="class#7418:7700" expanded="false" />
             <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
           </folding>
         </state>
@@ -767,11 +901,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
@@ -779,15 +916,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
             <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
             <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
-            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#start#0;class#LMenu#0" expanded="false" />
             <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
             <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
@@ -795,7 +932,7 @@
             <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
-            <element signature="class#7255:7537" expanded="false" />
+            <element signature="class#7418:7700" expanded="false" />
             <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
           </folding>
         </state>
@@ -805,11 +942,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
@@ -817,15 +957,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
             <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
             <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
-            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#start#0;class#LMenu#0" expanded="false" />
             <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
             <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
@@ -833,7 +973,7 @@
             <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
-            <element signature="class#7255:7537" expanded="false" />
+            <element signature="class#7418:7700" expanded="false" />
             <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
           </folding>
         </state>
@@ -886,15 +1026,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Launchable.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/Launchable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
@@ -902,44 +1034,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButtonListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19636963">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5049505">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
-            <element signature="e#257#258#0" expanded="false" />
-            <element signature="e#286#287#0" expanded="false" />
             <element signature="e#326#327#0" expanded="false" />
-            <element signature="e#348#349#0" expanded="false" />
-            <element signature="e#399#400#0" expanded="false" />
-            <element signature="e#428#429#0" expanded="false" />
-            <element signature="e#466#467#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#535#536#0" expanded="false" />
-            <element signature="e#560#561#0" expanded="false" />
-            <element signature="e#596#597#0" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#668#669#0" expanded="false" />
-            <element signature="e#687#688#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuItem.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5891089">
           <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-          <folding>
-            <element signature="e#499#500#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -948,10 +1057,10 @@
         <state vertical-scroll-proportion="0.16831683">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
-            <element signature="e#196#197#0" expanded="false" />
-            <element signature="e#230#231#0" expanded="false" />
-            <element signature="e#282#283#0" expanded="false" />
-            <element signature="e#320#321#0" expanded="false" />
+            <element signature="e#197#198#0" expanded="false" />
+            <element signature="e#231#232#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -960,37 +1069,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25247526">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenuButton.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#264:417" expanded="false" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
+            <element signature="class#267:420" expanded="false" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
             <element signature="method#changeColor#0;class#LMenuButton#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
           <folding>
+            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#changeContainer#0;class#LMenu#0" expanded="false" />
             <element signature="method#displayItemOn#0;class#LMenu#0" expanded="false" />
             <element signature="method#selectItem#0;class#LMenu#0" expanded="false" />
-            <element signature="method#LMenu#0;class#LMenu#0" expanded="false" />
             <element signature="method#start#0;class#LMenu#0" expanded="false" />
             <element signature="method#showControls#0;class#LMenu#0" expanded="false" />
             <element signature="method#hideControls#0;class#LMenu#0" expanded="false" />
@@ -998,30 +1106,49 @@
             <element signature="method#getActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#launchActiveItem#0;class#LMenu#0" expanded="false" />
             <element signature="method#controlButtons#0;class#LMenu#0" expanded="false" />
-            <element signature="class#7255:7537" expanded="false" />
+            <element signature="class#7418:7700" expanded="false" />
             <element signature="method#getControlView#0;class#LMenu#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LaunchpadView.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LaunchpadView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/LView.java">
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LMenuButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36468646">
-          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/ui/LView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
             <element signature="method#LView#0;class#LView#0" expanded="false" />
             <element signature="method#launchpadGridPressed#0;class#LView#0" expanded="false" />
             <element signature="method#launchpadGridReleased#0;class#LView#0" expanded="false" />
             <element signature="method#sideButtonPressed#0;class#LView#0" expanded="false" />
             <element signature="method#sideButtonReleased#0;class#LView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tk/adamj57/Launchpad/LMenu/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5049505">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
           </folding>
         </state>
       </provider>

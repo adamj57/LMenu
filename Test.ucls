@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
-  <class id="1" language="java" name="tk.adamj57.Launchpad.LMenu.LMenu" project="LMenu" 
+  <class id="1" language="java" name="tk.adamj57.Launchpad.LMenu.ui.LMenu" project="LMenu"
     file="/LMenu/src/tk/adamj57/Launchpad/LMenu/LMenu.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="495" width="214" x="-278" y="-74"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -10,7 +10,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="tk.adamj57.Launchpad.LMenu.LMenuContainer" project="LMenu" 
+  <class id="2" language="java" name="tk.adamj57.Launchpad.LMenu.ui.LMenuContainer" project="LMenu"
     file="/LMenu/src/tk/adamj57/Launchpad/LMenu/LMenuContainer.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="150" y="-20"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -19,7 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="tk.adamj57.Launchpad.LMenu.LMenuItem" project="LMenu" 
+  <class id="3" language="java" name="tk.adamj57.Launchpad.LMenu.ui.LMenuItem" project="LMenu"
     file="/LMenu/src/tk/adamj57/Launchpad/LMenu/LMenuItem.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="466" y="121"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -37,7 +37,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="tk.adamj57.Launchpad.LMenu.Launchable" project="LMenu" 
+  <interface id="5" language="java" name="tk.adamj57.Launchpad.LMenu.ui.Launchable" project="LMenu"
     file="/LMenu/src/tk/adamj57/Launchpad/LMenu/Launchable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="42" y="249"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
